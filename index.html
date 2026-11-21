@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>單張圖片</title>
     <style>
-        /* 讓圖片在頁面中水平垂直居中，並自適應大小 */
+        /* 1. 修正：將原本的 - 改為 * 才會正確清除預設邊距 */
         * {
             margin: 0;
             padding: 0;
@@ -14,9 +14,12 @@
         body {
             min-height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5; /* 淺色背景，可選 */
+            flex-direction: column; /* 2. 關鍵：讓內部元素由上往下垂直排列 */
+            align-items: center;    /* 水平置中 */
+            justify-content: center;/* 垂直置中 */
+            gap: 20px;              /* 可選：兩張圖片之間的上下間距 */
+            padding: 20px;          /* 可選：上下留白，避免圖片貼邊 */
+            background-color: #f5f5f5;
         }
         img {
             max-width: 100%;
@@ -24,13 +27,12 @@
             width: auto;
             height: auto;
             display: block;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 可選：輕微陰影 */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <!-- 將 src 替換為你的圖片路徑或 URL -->
-    <img src="Ubus.jpg" alt="統聯">
-		<img src="Ubus_T.jpg" alt="統聯">
+    <div><img src="Ubus.jpg" alt="統聯"></div>
+    <div><img src="Ubus_T.jpg" alt="統聯"></div>
 </body>
 </html>
