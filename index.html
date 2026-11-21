@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單張圖片</title>
+    <style>
+        /* 讓圖片在頁面中水平垂直居中，並自適應大小 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5; /* 淺色背景，可選 */
+        }
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            width: auto;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 可選：輕微陰影 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 將 src 替換為你的圖片路徑或 URL -->
+    <img src="Ubus.jpg" alt="統聯">
+</body>
+</html>
